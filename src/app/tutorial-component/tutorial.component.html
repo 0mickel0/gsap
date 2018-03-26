@@ -1,0 +1,18 @@
+<div class="demo">
+  <div #box1 class="box box1">left</div>
+  <div #box2 class="box box2">ease</div>
+  <div #box31 class="box31"></div>
+  <div #box3 class="box box3">delay</div>
+  <div #box4 class="box box4">color</div>
+  <div #box5 class="box box5">from</div>
+
+  <div class="box box6" (click)="changePosition($event)">value</div>
+
+  <div class="counter-wrapepr">
+    <div class="box box7" (click)="getStatus($event)">updated</div>
+    <div #updateOutput class="update">{{updateCount}}</div>
+    <div #completeOutput class="output">{{completeOutputValue}}</div>
+
+  </div>
+
+</div>
