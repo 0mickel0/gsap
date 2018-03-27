@@ -1,0 +1,33 @@
+.line{
+  position: relative;
+  width: 692px;
+  height: 10px;
+  margin: 30px 0 10px 0;
+  border-radius: 2px;
+  background: grey;
+  .cursor{
+    position: absolute;
+    margin-top: -10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #bfbfbf;
+    box-shadow: -2px 2px 11px 1px #c2c2c259;
+  }
+}
+.control-group{
+  height: 75px;
+  .btn{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    margin: 10px 10px 0 0;
+    float: left;
+    height: 25px;
+    background-color: #bfbfbf;
+    box-shadow: -2px 2px 11px 1px #c2c2c238;
+    border-radius: 3px;
+  }
+}

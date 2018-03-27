@@ -1,0 +1,19 @@
+
+<div class="line">
+  <div class="yoyo"></div>
+</div>
+<div class="control-group">
+  <div class="btn" (click)="playTween($event)">play()</div>
+  <div class="control">
+    <label>Repeat </label>
+    <input type="number" step="1" [(ngModel)]="repeat">
+  </div>
+
+  <div class="control">
+    <label>Delay </label>
+    <input type="number" step="0.1" [(ngModel)]="delay">
+  </div>
+  <p>doesnt work</p>
+  <p>{{repeat}} {{delay}}</p>
+</div>
+

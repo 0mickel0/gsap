@@ -13,11 +13,10 @@ export class TutorialComponent implements OnInit {
   @ViewChild('box3') delay: ElementRef;
   @ViewChild('box4') color: ElementRef;
   @ViewChild('box5') from: ElementRef;
-  @ViewChild('updateOutput') updateOutput: ElementRef;
-  @ViewChild('completeOutput') completeOutput: ElementRef;
+  @ViewChild('box8') restart: ElementRef;
   public updateCount = 0;
-  public updateOutputValue : number;
-  public completeOutputValue = '123';
+  public completeOutputValue = '';
+  public restartTweenAnim;
 
   ngOnInit() {
     TweenLite.to(this.left.nativeElement, 3, {left:600});
@@ -26,6 +25,7 @@ export class TutorialComponent implements OnInit {
     TweenLite.to(this.delay.nativeElement, 2, {left:"600px", delay:2.5});
     TweenLite.to(this.color.nativeElement, 2, {left:"600px", backgroundColor:"white", color:"#ff5722"});
     TweenLite.from(this.from.nativeElement, 6, {opacity:0, left:"600px"});
+    this.restartTweenAnim = TweenLite.to(this.restart.nativeElement, 3, {left:"600px"});
   }
 
   changePosition(event){
@@ -35,18 +35,32 @@ export class TutorialComponent implements OnInit {
   }
 
   getStatus(event){
+    this.completeOutputValue = '11';
+    const k = this;
     TweenLite.to(event.target, 0.3, {left:"0px"}),
-    TweenLite.to(event.target, 2, {left:"300px", onUpdate: this.updateHandler(), onComplete: this.completeHandler, onCompleteParams:["animation complete!"], delay:0.3});
+    TweenLite.to(event.target, 2, {
+      left:"300px",
+      onUpdate: ()=> {
+        k.updateCount++;
+      },
+      onComplete: this.completeHandler,
+      onCompleteParams:["animation complete!"],
+      delay:0.3
+    });
   }
 
   updateHandler(){
     this.updateCount++;
-    console.log('tick');
+    console.log(this.updateCount, 'tick');
   }
 
   completeHandler(message){
-    this.completeOutputValue = message;
-    console.log(message);
+    this.completeOutputValue = '22';
+    console.log(message, this.completeOutputValue);
+  }
+
+  restartTween(event){
+    this.restartTweenAnim.restart();
   }
 
 }

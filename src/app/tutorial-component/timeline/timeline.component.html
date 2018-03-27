@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="animation">
+    <div class="brick1 brick"></div>
+    <div class="brick2 brick"></div>
+    <div class="brick3 brick"></div>
+    <div class="brick4 brick"></div>
+    <div class="brick5 brick"></div>
+    <div class="brick6 brick"></div>
+    <div class="btn" (click)="restartTween($event)"></div>
+  </div>
+
+  <div class="slider">
+    <nouislider [connect]="true" [min]="0" [max]="100" [step]="0.1"
+                [(ngModel)]="someRange" (ngModelChange)="onChange($event)"></nouislider>
+  </div>
+  {{someRange}}
+</div>

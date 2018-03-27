@@ -1,4 +1,4 @@
-<div class="demo">
+
   <div #box1 class="box box1">left</div>
   <div #box2 class="box box2">ease</div>
   <div #box31 class="box31"></div>
@@ -10,9 +10,11 @@
 
   <div class="counter-wrapepr">
     <div class="box box7" (click)="getStatus($event)">updated</div>
-    <div #updateOutput class="update">{{updateCount}}</div>
-    <div #completeOutput class="output">{{completeOutputValue}}</div>
-
+    <div class="update">{{updateCount}}</div>
+    <div class="output">{{completeOutputValue}}</div>
   </div>
 
-</div>
+  <div #box8 class="box box8" (click)="restartTween($event)">restart</div>
+  <kind-of-player></kind-of-player>
+  <yoyo></yoyo>
+  <timeline></timeline>
