@@ -12,6 +12,10 @@ import { KindOfPlayerComponent } from './tutorial-component/kind-of-player/kind-
 import { YoyoComponent } from './tutorial-component/yoyo/yoyo.component';
 import { TimelineComponent } from './tutorial-component/timeline/timeline.component';
 import { DraggingComponent } from './tutorial-component/dragging/dragging.component';
+import { CheckerComponent } from './shared/checker/checker.component';
+import { WheelComponent } from './tutorial-component/wheel/wheel.component';
+import { D3Component } from './tutorial-component/d3-component/d3.component';
+import { ScaleAxisComponent } from './tutorial-component/d3-component/scale-axis/scale-axis.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { DraggingComponent } from './tutorial-component/dragging/dragging.compon
     KindOfPlayerComponent,
     YoyoComponent,
     TimelineComponent,
-    DraggingComponent
+    DraggingComponent,
+    CheckerComponent,
+    WheelComponent,
+    D3Component,
+    ScaleAxisComponent
   ],
   imports: [
     BrowserModule,

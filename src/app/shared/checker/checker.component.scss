@@ -1,0 +1,13 @@
+.white-player, .black-player{
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.white-player{
+  background-color: white;
+}
+.black-player{
+  background-color: black;
+}

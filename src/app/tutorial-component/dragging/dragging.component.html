@@ -1,8 +1,13 @@
 <p>dragging</p>
 <div class="container-wrapper">
   <section class="gridContainer" *ngFor="let field of fields; index as i">
-    <section class="gridRows" *ngFor="let unit of field.value.reverse(); index as j">
-      <section class="gridBox">{{j+i*8}}</section>
+    <section class="gridRows" *ngFor="let unit of field.value.reverse()">
+      <section class="gridBox">
+        <checker player={{unit.team}}></checker>
+      </section>
     </section>
   </section>
+  <div class="field">
+    <div #block class="block"></div>
+  </div>
 </div>

@@ -1,8 +1,8 @@
 export const field = [
 
   { id: 'A',
-    value: [{ id: 'A1', team: 1 },
-            { id: 'A2', team: 2 },
+    value: [{ id: 'A1', team: 'white' },
+            { id: 'A2', team: 'black' },
             { id: 'A3', team: null },
             { id: 'A4', team: null },
             { id: 'A5', team: null },
